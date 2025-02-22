@@ -2,6 +2,10 @@
 
 Ein flexibles WordPress-Plugin, das eine Passwortkarte generiert und über einen Shortcode eingebunden werden kann. Nutze die generierte Karte, um sichere Passwörter offline zu speichern und einfach abzurufen.
 
+##Anleitung und User-Info
+<https://github.com/robatsh/PasswordCardGenerator/wiki>
+
+
 ## Funktionen
 - Generiert eine einzigartige Passwortkarte mit zufälligen Zeichen.
 - Flexibel anpassbare Zeilenanzahl über Shortcode.
