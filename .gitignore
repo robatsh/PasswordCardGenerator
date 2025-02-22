@@ -1,0 +1,54 @@
+# README.md ausschließen
+README.md
+
+# Allgemeine System-Dateien
+.DS_Store
+Thumbs.db
+*.bak
+*.swp
+*.swo
+*.swn
+*.sws
+
+# Git-spezifische Dateien
+.git/
+.gitignore
+
+# Betriebssystem-spezifische Dateien
+*.log
+*.tmp
+*.cache
+*.lock
+
+# PHP & Composer
+/vendor/
+composer.lock
+composer.phar
+
+# WordPress spezifisch
+wp-config.php
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/backup/
+wp-content/debug.log
+
+# IDE / Editor-Dateien
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+# Build-Dateien
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+
+# Sicherheit
+.env
+*.env.local
+*.env.production
+*.env.test
+.env.*
