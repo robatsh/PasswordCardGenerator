@@ -1,0 +1,147 @@
+/* Basis-Variablen (werden ggf. per Inline-Style überschrieben) */
+:root {
+  --font-family: sans-serif;
+  --font-size: 11px;
+  --font-color: #000000;
+  --table-border: 1px solid black;
+  --header-bg: #57afc6;
+  --side-bg: #57afc6;
+  --corner-bg: #000000;
+  --cell-bg: #ffffff;
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+/* Container für den Plugin-Output */
+#pcg-container {
+  margin: 1rem auto;
+  max-width: 800px;
+}
+
+/* Styling für das Customizer-Formular */
+.pcg-customizer-form {
+  max-width: 400px;
+  margin: 1rem auto;
+  padding: 1rem;
+  background: #2c2c2c;
+  border-radius: 8px;
+  color: #ffffff;
+}
+
+.pcg-customizer-form fieldset {
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.pcg-customizer-form legend {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.pcg-customizer-form label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.pcg-customizer-form input[type="color"],
+.pcg-customizer-form input[type="number"] {
+  margin-left: 1rem;
+  min-width: 80px;
+}
+
+.pcg-customizer-form input {
+  border: 1px solid #666;
+  border-radius: 4px;
+  background: #fff;
+  color: #000;
+  padding: 2px 5px;
+  font-size: 1rem;
+}
+
+.pcg-customizer-form input:hover {
+  border-color: #999;
+}
+
+/* Styling für den Bereich der generierten Karte */
+#card-output {
+  margin-top: 20px;
+  font-size: var(--font-size);
+  color: var(--font-color);
+}
+
+/* Tabellenlayout der Passwortkarte */
+.password-card-table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.password-card-table th,
+.password-card-table td {
+  border: var(--table-border);
+  padding: 5px;
+  text-align: center;
+  min-width: 20px;
+}
+
+.header-cell {
+  background-color: var(--header-bg);
+}
+
+.side-cell {
+  background-color: var(--side-bg);
+}
+
+.corner {
+  background-color: var(--corner-bg);
+}
+
+.card-cell {
+  background-color: var(--cell-bg);
+  color: var(--font-color);
+}
+
+#pswc_inst{
+  visibility: hidden;
+  display: none;
+}
+
+.instructions {
+  margin-top: 10px;
+}
+
+/* Druckoptimierung: Nur der äußere Container wird angezeigt */
+@media print {
+  /* Alles unsichtbar machen */
+  body * {
+      visibility: hidden;
+      display:none;
+  }
+  /* Den gewünschten Container und alle seine Kind-Elemente wieder sichtbar machen */
+  #card-output, 
+  #card-output * {
+      visibility: visible;
+      display:block;
+  }
+  /* Den sichtbaren Container oben links positionieren und Farbdruck erzwingen */
+  #card-output {
+      position: absolute;
+      top: 0px !important;
+      left: 0px;
+      width: 100%;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+  }
+
+  #pswc_inst{
+    visibility: visible;
+    display: block;
+  }
+
+}
+
